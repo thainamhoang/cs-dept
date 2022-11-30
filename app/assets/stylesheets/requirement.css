@@ -1,0 +1,11 @@
+.main-wrapper {
+    height: 40vh;
+    margin: 2rem 0;
+}
+
+.center-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid #000000;
+}

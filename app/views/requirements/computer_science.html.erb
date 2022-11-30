@@ -1,0 +1,68 @@
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <%= link_to "Home", root_path %>
+        </li>
+        <li class="breadcrumb-item">
+            <%= link_to "Computer Science & Data Science Major & Minor Requirements", requirements_path %>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+            Computer Science Requirements
+        </li>
+    </ol>
+</nav>
+
+<h1>Computer Science Requirements</h1>
+
+<p>
+Computer science focuses on how to create a model for a real-world situation,
+how to represent that model inside a computer, and how to devise mechanizable techniques
+to manipulate that model. Such models and techniques are used to understand or investigate the situation or to solve real-world problems.
+</p>
+
+<p>
+Introductory courses prepare a student to do such problem-solving in any domain.
+Students pursuing a computer science major learn more advanced techniques for such modeling and
+also focus on models specific to computer science and computer technology. Upper-level elective
+courses prepare students for graduate-level study and for vocations in various computer fields.
+</p>
+
+<div class="accordion" id="CsciRequirement" style="margin: 2rem 0;">
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingCsciMajor">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCsciMajor" aria-expanded="false" aria-controls="collapseCsciMajor">
+        <strong>Major Requirements (11.5 units)</strong>
+      </button>
+    </h2>
+    <div id="collapseCsciMajor" class="accordion-collapse collapse show" aria-labelledby="headingCsciMajor" data-bs-parent="#CsciRequirement">
+      <div class="accordion-body">
+        <ol>
+          <li style="margin-bottom: 1rem"><strong>Eight</strong> and <strong>half</strong> departmental units: CSCI 111, 175, 204, 245, 315, 335, 347 (.5), 367, and 377.</li> #TODO : LINK
+          <li style="margin-bottom: 1rem"><strong>One</strong> elective, approved by the advisor that incorporates computer science skills into another discipline, such as but not limited to COGS 280, DSDA 345 and 385, and MATH 300.</li>
+          <li style="margin-bottom: 1rem"><strong>Two</strong> supporting units: MATH 110 or 113, and 160.</li>
+          <li style="margin-bottom: 1rem">Students planning to attend graduate school in computer science should consult with an advisor for additional study that should be done. The computer science program recognizes the importance of oral and written communication.</li>
+          <li style="margin-bottom: 1rem">Successful graduates of the program should be able to speak and write effectively in order to communicate important ideas to diverse audiences. The program helps students develop these capabilities in the context of computer science through the progression in its courses. In written communication, students are expected to document their programming work via both internal and external documentation. In oral communication, students are expected to present all aspects of their work and effectively communicate in teams. In all forms of communication, students are expected to be able to address both technical and general audiences. The capstone experiences offer an important opportunity to solidify and extend these skills as students prepare for their future work.</li>
+          <li style="margin-bottom: 1rem">Students majoring computer science may choose to receive the Bachelor of Science degree rather than the Bachelor of Arts degree by completing a minimum of 4 units in biology, chemistry, geology, and/or physics.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingCsciMinor">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCsciMinor" aria-expanded="false" aria-controls="collapseCsciMinor">
+        <strong>Minor Requirements (6 units)</strong>
+      </button>
+    </h2>
+    <div id="collapseCsciMinor" class="accordion-collapse collapse" aria-labelledby="headingCsciMinor" data-bs-parent="#CsciRequirement">
+      <div class="accordion-body">
+        <ol>
+          <li style="margin-bottom: 1rem"><strong>Two</strong> units of core courses: CSCI 111 and 204.</li>
+          <li style="margin-bottom: 1rem"><strong>Four</strong> additional units of computer science courses chosen from 175, 245, 315, 335, 347, 367, and 377. COGS 280, DSDA 345, 385, or MATH 300 may be used toward this 1 unit if approved in advance by a computer science advisor or another course approved in advance by the department chair.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+</div>

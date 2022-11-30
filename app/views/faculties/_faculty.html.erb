@@ -1,0 +1,49 @@
+<div id="<%= dom_id faculty %>">
+
+  <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <%= link_to "Home", root_path %>
+      </li>
+      <li class="breadcrumb-item">
+        <%= link_to "Faculty & Staff", faculties_path %>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">
+        <%= "#{faculty.first_name} #{faculty.last_name}" %>
+      </li>
+    </ol>
+  </nav>
+
+  <h1>
+    <%= "#{faculty.first_name} #{faculty.last_name}" %>
+  </h1>
+
+  <p style="margin-bottom: 2.5rem">
+    <%= faculty.title %>
+  </p>
+
+  <div>
+    <%= image_tag (faculty.link), class: "img-responsive"%>
+  </div>
+
+  <p>
+    <strong>Pronouns:</strong>
+    <%= faculty.pronouns %>
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <%= faculty.email %>
+  </p>
+
+  <p>
+    <strong>Phone:</strong>
+    <%= faculty.phone %>
+  </p>
+
+  <p>
+    <strong>Office:</strong>
+    <%= faculty.office %>
+  </p>
+
+</div>

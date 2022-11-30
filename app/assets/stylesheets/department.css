@@ -1,0 +1,19 @@
+.main-wrapper {
+    height: 80vh;
+}
+
+.center-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid #000000;
+}
+
+.btn-text {
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+.header {
+    margin-bottom: 2rem;
+}

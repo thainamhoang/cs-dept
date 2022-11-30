@@ -1,0 +1,41 @@
+<p style="color: green"><%= notice %></p>
+
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <%= link_to "Home", root_path %>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Students stories & Research</li>
+  </ol>
+</nav>
+
+<h1>Students stories & Research</h1>
+<h1>Posters</h1>
+<h1>Ongoing Researchs</h1>
+
+<div id="students">
+  <% @students.each do |student| %>
+  
+    <div id="<%= dom_id student %>" style="margin: 2rem 0">
+      <div class="card">
+        <div class="row card-body">
+          <div class="col col-md-auto">
+            <%= image_tag (student.image), class: "rounded", style: "max-width: 7.5rem; height: auto, object-fit: cover"%>
+          </div>
+          <div class="col-md-auto">
+            <h5 class="card-title">
+              <%= student.title %>
+            </h5>
+            <h6 class="card-subtitle mb-2 text-muted">
+              <%= student.introduction %>
+            </h6>
+            <%= link_to "Read full story", student, class: "card-link", style: "position: absolute, bottom: 0" %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <% end %>
+</div>
+
+<%= link_to "New story", new_student_path %>
