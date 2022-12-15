@@ -38,7 +38,17 @@ courses prepare students for graduate-level study and for vocations in various c
     <div id="collapseCsciMajor" class="accordion-collapse collapse show" aria-labelledby="headingCsciMajor" data-bs-parent="#CsciRequirement">
       <div class="accordion-body">
         <ol>
-          <li style="margin-bottom: 1rem"><strong>Eight</strong> and <strong>half</strong> departmental units: CSCI 111, 175, 204, 245, 315, 335, 347 (.5), 367, and 377.</li> #TODO : LINK
+          <li style="margin-bottom: 1rem"><strong>Eight</strong> and <strong>half</strong> departmental units: CSCI
+            <%= link_to "111", course_path(id: 3)%>,
+            <%= link_to "175", course_path(id: 6)%>,
+            <%= link_to "204", course_path(id: 7)%>,
+            <%= link_to "245", course_path(id: 8)%>,
+            <%= link_to "315", course_path(id: 11)%>,
+            <%= link_to "335", course_path(id: 12)%>,
+            <%= link_to "347", course_path(id: 13)%> (.5),
+            <%= link_to "367", course_path(id: 14)%>, and
+            <%= link_to "377", course_path(id: 16)%>.
+          </li>
           <li style="margin-bottom: 1rem"><strong>One</strong> elective, approved by the advisor that incorporates computer science skills into another discipline, such as but not limited to COGS 280, DSDA 345 and 385, and MATH 300.</li>
           <li style="margin-bottom: 1rem"><strong>Two</strong> supporting units: MATH 110 or 113, and 160.</li>
           <li style="margin-bottom: 1rem">Students planning to attend graduate school in computer science should consult with an advisor for additional study that should be done. The computer science program recognizes the importance of oral and written communication.</li>
@@ -58,8 +68,18 @@ courses prepare students for graduate-level study and for vocations in various c
     <div id="collapseCsciMinor" class="accordion-collapse collapse" aria-labelledby="headingCsciMinor" data-bs-parent="#CsciRequirement">
       <div class="accordion-body">
         <ol>
-          <li style="margin-bottom: 1rem"><strong>Two</strong> units of core courses: CSCI 111 and 204.</li>
-          <li style="margin-bottom: 1rem"><strong>Four</strong> additional units of computer science courses chosen from 175, 245, 315, 335, 347, 367, and 377. COGS 280, DSDA 345, 385, or MATH 300 may be used toward this 1 unit if approved in advance by a computer science advisor or another course approved in advance by the department chair.</li>
+          <li style="margin-bottom: 1rem"><strong>Two</strong> units of core courses: CSCI
+            <%= link_to "111", course_path(id: 3)%>, and
+            <%= link_to "204", course_path(id: 7)%>.
+          </li>
+          <li style="margin-bottom: 1rem"><strong>Four</strong> additional units of computer science courses chosen from
+          <%= link_to "175", course_path(id: 6)%>,
+          <%= link_to "245", course_path(id: 8)%>,
+          <%= link_to "315", course_path(id: 11)%>,
+          <%= link_to "335", course_path(id: 12)%>,
+          <%= link_to "347", course_path(id: 13)%>,
+          <%= link_to "367", course_path(id: 14)%>, and
+          <%= link_to "377", course_path(id: 16)%>. COGS 280, DSDA 345, 385, or MATH 300 may be used toward this 1 unit if approved in advance by a computer science advisor or another course approved in advance by the department chair.</li>
         </ol>
       </div>
     </div>

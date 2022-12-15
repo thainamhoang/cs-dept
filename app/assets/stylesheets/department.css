@@ -17,3 +17,20 @@
 .header {
     margin-bottom: 2rem;
 }
+
+.text-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #55555580;
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 6px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }

@@ -1,0 +1,37 @@
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <%= link_to "Home", root_path %>
+    </li>
+    <li class="breadcrumb-item">
+      <%= link_to "Student Stories & Research", students_path %>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">
+      Posters
+    </li>
+  </ol>
+</nav>
+<h1>Posters</h1>
+<div id="students-poster">
+  <div class="row row-cols-3 row-cols-md-3 g-4">
+    <% @posters.each do |row| %>
+      <div class="col">
+        <div class="card" >
+          <%= image_tag (row["poster"]), class: "card-img-top" %>
+          <div class="card-body">
+            <h5 class="card-title">
+              <%= row["name"] %>
+            </h5>
+            <p class="card-text">
+              <%= row["description"] %>
+            </p>
+            <p class="card-text">
+              <small><%= row["date"] %></small>
+            </p>
+            <%= link_to "Go somewhere", row["poster"], class: "btn btn-primary", target: :_blank %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

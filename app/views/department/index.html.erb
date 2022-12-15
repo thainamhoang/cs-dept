@@ -1,24 +1,38 @@
 <%= stylesheet_link_tag "department" %>
 <div class="container overflow-hidden">
-    <div class="container text-center">
-        <div class="row header">
-            <div class="col">
-                <h3 class="display-5">Beloit Computer Science Program</h3>
-            </div>
-        </div>
-        <div class="row row-cols-2 main-wrapper px-4">
-            <%= link_to students_path, class:"nav-link col btn btn-light center-div" do %>
-                <p class="h2">Student stories & Research</p>
-            <% end %>
-            <%= link_to faculties_path, class:"nav-link col btn btn-light center-div" do %>
-                <p class="h2">Faculty & Staff</p>
-            <% end %>
-            <%= link_to courses_path, class:"nav-link col btn btn-light center-div" do %>
-                <p class="h2">Courses</p>
-            <% end %>
-            <%= link_to requirements_path, class:"nav-link col btn btn-light center-div" do %>
-                <p class="h2">Computer Science & Data Science <br> Major & Minor Requirements</p>
-            <% end %>
-        </div>
+  <div class="container text-center">
+    <div class="row header">
+      <div class="col">
+        <h3 class="display-5">Beloit Computer Science Program</h3>
+      </div>
     </div>
+    <div class="row row-cols-2 row-cols-md-2 px-4">
+      <%= link_to students_path, class:"nav-link col btn btn-light center-div" do %>
+        <div class="card" >
+          <%= image_tag "/assets/bg/story-bg.jpg", class: "card-img-top" %>
+          <div class="text-centered">Student Stories & Research</div>
+        </div>
+      <% end %>
+      <%= link_to faculties_path, class:"nav-link col btn btn-light center-div" do %>
+        <div class="card" >
+          <%= image_tag "/assets/bg/dept-bg.jpg", class: "card-img-top" %>
+          <div class="text-centered">Faculty & Staff</div>
+        </div>
+      <% end %>
+      <%= link_to courses_path, class:"nav-link col btn btn-light center-div" do %>
+        <div class="card" >
+          <%= image_tag "/assets/bg/course-bg.jpg", class: "card-img-top" %>
+          <div class="text-centered">Courses</div>
+        </div>
+      <% end %>
+      <%= link_to requirements_path, class:"nav-link col btn btn-light center-div" do %>
+        <div class="card" >
+          <%= image_tag "/assets/bg/requirement-bg.jpg", class: "card-img-top" %>
+          <div class="text-centered">Computer Science & <br>
+             Data Science <br>
+            Major & Minor Requirements</div>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>

@@ -1,21 +1,19 @@
 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-            <%= link_to "Home", root_path %>
-        </li>
-        <li class="breadcrumb-item">
-            <%= link_to "Computer Science & Data Science Major & Minor Requirements", requirements_path %>
-        </li>
-        <li class="breadcrumb-item active" aria-current="page">
-            Data Science & Analytics Requirements
-        </li>
-    </ol>
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <%= link_to "Home", root_path %>
+    </li>
+    <li class="breadcrumb-item">
+      <%= link_to "Computer Science & Data Science Major & Minor Requirements", requirements_path %>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">
+      Data Science & Analytics Requirements
+    </li>
+  </ol>
 </nav>
-
 <h1>Data Science & Analytics Requirements</h1>
-
 <p>
-For both data science and data analytics majors, students take:
+  For both data science and data analytics majors, students take:
   <ol>
     <li><strong>Core courses</strong> in math, statistics, computer science.</li>
     <li>
@@ -27,14 +25,11 @@ For both data science and data analytics majors, students take:
     <li>One senior seminar or capstone experience, in which students work on a real data project.</li>
   </ol>
 </p>
-
 <p>
   Majoring in data science or data analytics at Beloit, you will learn not only how to work with data, but also the humanistic foundation of data work.
   You will acquire career-ready skills that will position you, at graduation, to work in a variety of fields that make use of complex data sets (e.g. business, the arts, science, government, and more).
 </p>
-
 <div class="accordion" id="DsdaRequirement" style="margin: 2rem 0;">
-
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingDsdaMajor">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDsdaMajor" aria-expanded="false" aria-controls="collapseDsdaMajor">
@@ -46,7 +41,11 @@ For both data science and data analytics majors, students take:
         <ol>
           <li style="margin-bottom: 1rem">DSDA 210 (.5), 345, and 385.</li>
           <li style="margin-bottom: 1rem"><strong>Four</strong> units in Mathematics: MATH 110, 115, 175, and 205.</li>
-          <li style="margin-bottom: 1rem"><strong>Three</strong> Three units in Computer science: CSCI 111, 204, and 367.</li>
+          <li style="margin-bottom: 1rem"><strong>Three</strong> Three units in Computer science: CSCI
+            <%= link_to "111", course_path(id: 3)%>,
+            <%= link_to "204", course_path(id: 7)%>, and
+            <%= link_to "367", course_path(id: 14)%>.
+          </li>
           <li style="margin-bottom: 1rem"><strong>Two</strong> units in Data Science and Data Analytics or the humanities, chosen from ART 325, DSDA 215, ENGL 265, GLAM 249, MDST 150, CPLT 215.</li>
           <li style="margin-bottom: 1rem"><strong>One</strong> disciplinary specialty chosen from the following (3 units):
             <ol>
@@ -70,7 +69,6 @@ For both data science and data analytics majors, students take:
       </div>
     </div>
   </div>
-
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingDsdaMinor">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDsdaMinor" aria-expanded="false" aria-controls="collapseDsdaMinor">
@@ -82,7 +80,11 @@ For both data science and data analytics majors, students take:
         <ol>
           <li style="margin-bottom: 1rem">DSDA 210 (.5)</li>
           <li style="margin-bottom: 1rem"><strong>One</strong> unit in Mathematics: MATH 110.</li>
-          <li style="margin-bottom: 1rem"><strong>Three</strong> Three units in Computer science: CSCI 111, 204, and 367.</li>
+          <li style="margin-bottom: 1rem"><strong>Three</strong> Three units in Computer science: CSCI
+            <%= link_to "111", course_path(id: 3)%>,
+            <%= link_to "204", course_path(id: 7)%>, and
+            <%= link_to "367", course_path(id: 14)%>.
+          </li>
           <li style="margin-bottom: 1rem"><strong>Three</strong> units in Data Science and Data Analytics or the humanities, chosen from ART 325, DSDA 215, ENGL 265, GLAM 249, MDST 150, CPLT 215.</li>
           <li style="margin-bottom: 1rem"><strong>One</strong> disciplinary specialty chosen from the following (3 units, unless otherwise indicated):</li>
           <li style="margin-bottom: 1rem"><strong>One</strong> disciplinary specialty chosen from the following (3 units):
@@ -107,5 +109,4 @@ For both data science and data analytics majors, students take:
       </div>
     </div>
   </div>
-
 </div>

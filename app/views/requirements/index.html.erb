@@ -1,6 +1,5 @@
 <%= stylesheet_link_tag "requirement" %>
 <p style="color: green"><%= notice %></p>
-
 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item">
@@ -9,16 +8,20 @@
     <li class="breadcrumb-item active" aria-current="page">Computer Science & Data Science Major & Minor Requirements</li>
   </ol>
 </nav>
-
 <h1>Computer Science & Data Science Major & Minor Requirements</h1>
-
 <div class="container text-center overflow-hidden">
-  <div class="row main-wrapper px-4">
+  <div class="row row-cols-2 row-cols-md-2 px-4">
     <%= link_to computer_science_requirements_path, class:"nav-link col btn btn-light center-div" do %>
-      <p class="h2">Computer Science</p>
+      <div class="card" >
+        <%= image_tag "/assets/bg/cs-bg.jpg", class: "card-img-top" %>
+        <div class="text-centered">Computer Science</div>
+      </div>
     <% end %>
     <%= link_to data_science_analytics_requirements_path, class:"nav-link col btn btn-light center-div" do %>
-      <p class="h2">Data Science & Analytics</p>
+      <div class="card" >
+        <%= image_tag "/assets/bg/ds-bg.jpg", class: "card-img-top" %>
+        <div class="text-centered">Data Science & Analytics</div>
+      </div>
     <% end %>
   </div>
 </div>

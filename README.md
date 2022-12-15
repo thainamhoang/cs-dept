@@ -1,24 +1,33 @@
-# README
+# CS Department Website
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Running
 
-Things you may want to cover:
+- Server
+```
+rails s
+```
+- Database migration
+```
+rails db:migration
+```
 
-* Ruby version
+## API:
 
-* System dependencies
+### Faculty:
+- New: `http://127.0.0.1:3000/faculties/new`
+- Edit: `http://127.0.0.1:3000/faculties/:id/edit`
+- Delete: `http://127.0.0.1:3000/faculties/:id/delete`
 
-* Configuration
+### Courses:
+- New: `http://127.0.0.1:3000/courses/new`
+- Update: `http://127.0.0.1:3000/courses/:id/edit`
+- Delete: `http://127.0.0.1:3000/courses/:id/delete`
 
-* Database creation
+### Poster
+Update in `assets/data/poster.csv`.
 
-* Database initialization
+### Research
+Update in `assets/data/research.csv`.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Image background
+- Dimension: 780 x 520

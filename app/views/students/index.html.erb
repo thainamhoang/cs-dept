@@ -1,5 +1,5 @@
+<%= stylesheet_link_tag "student" %>
 <p style="color: green"><%= notice %></p>
-
 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item">
@@ -8,34 +8,32 @@
     <li class="breadcrumb-item active" aria-current="page">Students stories & Research</li>
   </ol>
 </nav>
-
-<h1>Students stories & Research</h1>
-<h1>Posters</h1>
-<h1>Ongoing Researchs</h1>
-
-<div id="students">
-  <% @students.each do |student| %>
-  
-    <div id="<%= dom_id student %>" style="margin: 2rem 0">
-      <div class="card">
-        <div class="row card-body">
-          <div class="col col-md-auto">
-            <%= image_tag (student.image), class: "rounded", style: "max-width: 7.5rem; height: auto, object-fit: cover"%>
-          </div>
-          <div class="col-md-auto">
-            <h5 class="card-title">
-              <%= student.title %>
-            </h5>
-            <h6 class="card-subtitle mb-2 text-muted">
-              <%= student.introduction %>
-            </h6>
-            <%= link_to "Read full story", student, class: "card-link", style: "position: absolute, bottom: 0" %>
-          </div>
-        </div>
+<h1>Student Stories & Research</h1>
+<div class="container text-center overflow-hidden">
+  <div class="row row-cols-2 row-cols-md-2 px-4">
+    <%= link_to stories_students_path, class:"nav-link col btn btn-light center-div" do %>
+      <div class="card" >
+        <%= image_tag "/assets/bg/alumni-bg.jpg", class: "card-img-top" %>
+        <div class="text-centered">Student & Alumni Stories</div>
       </div>
-    </div>
-
-  <% end %>
+    <% end %>
+    <%= link_to researchs_students_path, class:"nav-link col btn btn-light center-div" do %>
+      <div class="card" >
+        <%= image_tag "/assets/bg/research-bg.jpg", class: "card-img-top" %>
+        <div class="text-centered">Ongoing Researchs</div>
+      </div>
+    <% end %>
+    <%= link_to posters_students_path, class:"nav-link col btn btn-light center-div" do %>
+      <div class="card" >
+        <%= image_tag "/assets/bg/poster-bg.jpg", class: "card-img-top" %>
+        <div class="text-centered">Posters</div>
+      </div>
+    <% end %>
+    <%= link_to clubs_students_path, class:"nav-link col btn btn-light center-div" do %>
+      <div class="card" >
+        <%= image_tag "/assets/bg/cs-club-bg.jpg", class: "card-img-top" %>
+        <div class="text-centered">CS Club</div>
+      </div>
+    <% end %>
+  </div>
 </div>
-
-<%= link_to "New story", new_student_path %>

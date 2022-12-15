@@ -1,9 +1,7 @@
 require "test_helper"
 
 class CoursesControllerTest < ActionDispatch::IntegrationTest
-  setup do
-    @course = courses(:one)
-  end
+  setup { @course = courses(:one) }
 
   test "should get index" do
     get courses_url
@@ -17,7 +15,20 @@ class CoursesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create course" do
     assert_difference("Course.count") do
-      post courses_url, params: { course: { code: @course.code, credit: @course.credit, description: @course.description, domain: @course.domain, name: @course.name, prerequisite: @course.prerequisite, major: @course.major, minor: @course.minor } }
+      post courses_url,
+           params: {
+             course: {
+               code: @course.code,
+               credit: @course.credit,
+               description: @course.description,
+               domain: @course.domain,
+               name: @course.name,
+               prerequisite: @course.prerequisite,
+               major: @course.major,
+               minor: @course.minor,
+               offered: @course.offered
+             }
+           }
     end
 
     assert_redirected_to course_url(Course.last)
@@ -34,14 +45,25 @@ class CoursesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update course" do
-    patch course_url(@course), params: { course: { code: @course.code, credit: @course.credit, description: @course.description, domain: @course.domain, name: @course.name, prerequisite: @course.prerequisite, major: @course.major, minor: @course.minor } }
+    patch course_url(@course),
+          params: {
+            course: {
+              code: @course.code,
+              credit: @course.credit,
+              description: @course.description,
+              domain: @course.domain,
+              name: @course.name,
+              prerequisite: @course.prerequisite,
+              major: @course.major,
+              minor: @course.minor,
+              offered: @course.offered
+            }
+          }
     assert_redirected_to course_url(@course)
   end
 
   test "should destroy course" do
-    assert_difference("Course.count", -1) do
-      delete course_url(@course)
-    end
+    assert_difference("Course.count", -1) { delete course_url(@course) }
 
     assert_redirected_to courses_url
   end
